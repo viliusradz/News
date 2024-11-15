@@ -1,0 +1,149 @@
+.baseStyle
+{
+    background-color: #2d2d2d;
+    padding: 2%;
+    margin: 0;
+}
+#canvas
+{
+    display: block;
+}
+#textBounds
+{
+    width: 90%;
+}
+.textBlockStyle
+{
+    margin: 5% 5% 0 10%;
+    padding: 1em;
+    color: white;
+    border-radius: 1em;
+}
+
+.link
+{
+    text-decoration: none;
+    color: white;
+    padding: 0.5em 0.5em;
+    border: 0.1em dashed orange;
+}
+.baseHeader
+{
+    margin: auto;
+    width: 50%;
+    border: 2px solid orange;
+    border-radius: 0.4em;
+    padding: 10px;
+    align-content: center;
+    display:flex;
+    justify-content: center;
+}
+.contentCreationField
+{
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 500px;
+    border: 1px solid orange;
+    border-radius: 0.4em;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.textArea
+{
+    margin-top: 2%;
+    width: 700px;
+    height: 200px;
+    background-color: #2d2d2d;
+    color: white;
+}
+.labelDefault
+{
+    margin-top: 2%;
+    margin-left: 2%;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fillStyle
+{
+
+}
+.colorTextBox
+{
+    margin:2px 5px;
+    background-color: #2d2d2d00;
+    width: 40px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid grey;
+    border-radius: 0.1em;
+}
+#confirmArea
+{
+    height: 100px;
+    flex-direction: row;
+}
+.button
+{
+    margin: auto 5% auto 0;
+    background-color: #2d2d2d00;
+    border: 1px solid orange;
+    color: white;
+    height: 50%;
+    font-size: 1em;
+    border-radius: 0.4em;
+}
+.button:active
+{
+    border-color: white;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 5px 16px;
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}

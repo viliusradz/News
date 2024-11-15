@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../index.css"></link>
+    <title>Title</title>
+</head>
+<body class="baseStyle">
+
+<header class="baseHeader">
+    <a href="../../index.html" class="link">Teleprompter</a>
+</header>
+
+
+<div class="contentCreationField">
+    <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content" id="dropdownContent">
+            <a href="#">Speaker A</a>
+            <a href="#">Speaker B</a>
+            <a href="#">Speaker C</a>
+        </div>
+    </div>
+
+    <label class="labelDefault fillStyle"><textarea class="textArea"></textarea></label>
+</div>
+<div class="contentCreationField">
+    <label class="labelDefault">ForeColor: R<input type="text" class="colorTextBox"> G<input type="text"
+                                                                                             class="colorTextBox">
+        B<input type="text" class="colorTextBox"></label>
+    <label class="labelDefault">BackColor: R<input type="text" class="colorTextBox"> G<input type="text"
+                                                                                             class="colorTextBox">
+        B<input type="text" class="colorTextBox"></label>
+    <label class="labelDefault">Font Size: <input type="text" class="colorTextBox"></label>
+</div>
+<div class="contentCreationField" id="confirmArea">
+    <button class="button" id="createConfigButton">Create Configuration</button>
+    <button class="button" id="addParButton">Add Paragraph</button>
+</div>
+
+</body>
+</html>
