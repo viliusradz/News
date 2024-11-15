@@ -18,14 +18,11 @@ export class TextHandler {
     onResizeUpdateMethods = []
     textObjects;
 
-    constructor(canvas) {
+    constructor() {
         this.someArray = []
         this.moveSpeed = 10;
         this.x = 0;
         this.y = 0;
-        this.canvas = canvas;
-        this.ctx = this.canvas.getContext("2d");
-
         document.addEventListener("keydown", (args) => this.keyboardEventHandler(args))
         window.addEventListener("resize", (args)=> this.onResize(args))
     }
@@ -52,12 +49,15 @@ export class TextHandler {
     }
 
     drawText() {
+        const baseCont = document.getElementById("textBounds")
+        let height = 0;
         for (let iter of this.textObjects)
         {
-            this.ctx.font = "48px serif";
-            console.log(iter);
-            this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-            this.ctx.fillText(iter["text"],window.innerWidth/5,50);
+            const parag = document.createElement("p")
+            const node = document.createTextNode(iter["text"]);
+            parag.appendChild(node);
+            parag.style.padding = 1000;
+            baseCont.appendChild(node);
         }
     }
 
@@ -78,6 +78,7 @@ export class TextHandler {
                 this.x += this.moveSpeed;
                 break;
         }
+        //this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.inputUpdateMethods.forEach(method => {
             method()
         });
@@ -86,12 +87,12 @@ export class TextHandler {
 
     onResize(args)
     {
+        //this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         console.log(args)
         this.onResizeUpdateMethods.forEach(method => {method()})
     }
 
     drawBox(width = 100, height = 100) {
-        this.ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
         this.ctx.fillRect(this.x, this.y, width, height);
     }
 

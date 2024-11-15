@@ -6,6 +6,9 @@
 }
 #canvas
 {
-    color: white;
     display: block;
+}
+#textBounds
+{
+    width: 90%;
 }
