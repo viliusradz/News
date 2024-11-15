@@ -1,4 +1,5 @@
-import {TextHandler} from "./textHandler.js"
+import {createTextObject, TextHandler} from "./textHandler.js"
+import {Color} from "./utils.js"
 
 let canvas = null;
 let textHandler = null;
@@ -15,7 +16,13 @@ function initialize()
 
     // do drawing
     textHandler = new TextHandler(canvas);
-    textHandler.initBox(10,10, 50,50)
+    //textHandler.initBox(10,10, 50,50)
+    textHandler.initText([createTextObject(
+        "This is a text paragraph",
+        new Color(255, 20, 100),
+        new Color(10, 10, 10),
+        20
+        )]);
 }
 
 
