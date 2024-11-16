@@ -3,13 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <script src="Scripts/main.js" type="module"></script>
+    <script src="./Scripts/SaveData/speakers.json" type="application/json"></script>
+    <script src="./Scripts/SaveData/scenarios.json" type="application/json"></script>
     <link rel="stylesheet" href="Scripts/index.css">
     <title>Test</title>
 </head>
 <body class="baseStyle">
 <header class="baseHeader">
-<a href="Scripts/Configurator/configurator.html" class="link">Text Configurator</a>
+    <a href="Scripts/Configurator/configurator.html" class="link">Text Configurator</a>
 </header>
+<div class="contentCreationField" style="height: 10em; width: 100%; border:none">
+<div>
+    <div class="dropdown">
+        <button class="dropbtn">Scenario</button>
+        <div class="dropdown-content" id="scenarioSelector">
+        </div>
+    </div>
+</div>
+</div>
 <div id="textBounds">
 
 </div>

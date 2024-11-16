@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../index.css"></link>
+    <link rel="stylesheet" href="../index.css">
+    <script type="application/json" src="../SaveData/speakers.json"></script>
+    <script src="configuratorMain.js" type="module"></script>
     <title>Title</title>
 </head>
 <body class="baseStyle">
@@ -12,30 +14,49 @@
 </header>
 
 
+<label class="fieldHeader">Paragraph Creation</label>
 <div class="contentCreationField">
-    <div class="dropdown">
-        <button class="dropbtn">Dropdown</button>
-        <div class="dropdown-content" id="dropdownContent">
-            <a href="#">Speaker A</a>
-            <a href="#">Speaker B</a>
-            <a href="#">Speaker C</a>
+    <div>
+        <div class="dropdown">
+            <button class="dropbtn">Speaker</button>
+            <div class="dropdown-content" id="speakerSelector">
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Scenario</button>
+            <div class="dropdown-content" id="scenarioSelector">
+            </div>
         </div>
     </div>
 
-    <label class="labelDefault fillStyle"><textarea class="textArea"></textarea></label>
+    <label class="labelDefault fillStyle"><textarea class="textArea" id="paragraphContent"></textarea></label>
 </div>
+<label class="fieldHeader">Speaker Creation</label>
 <div class="contentCreationField">
-    <label class="labelDefault">ForeColor: R<input type="text" class="colorTextBox"> G<input type="text"
-                                                                                             class="colorTextBox">
-        B<input type="text" class="colorTextBox"></label>
-    <label class="labelDefault">BackColor: R<input type="text" class="colorTextBox"> G<input type="text"
-                                                                                             class="colorTextBox">
-        B<input type="text" class="colorTextBox"></label>
-    <label class="labelDefault">Font Size: <input type="text" class="colorTextBox"></label>
+    <label class="labelDefault">Name:<input type="text" class="colorTextBox textInput" id="nameInput"></label>
+    <label class="labelDefault" id="foreColor">ForeColor: R<input type="text" class="colorTextBox"> G<input type="text"
+                                                                                                            class="colorTextBox">
+        B<input type="text" class="colorTextBox"> A<input type="text" class="colorTextBox" value="1"></label>
+    <label class="labelDefault" id="backColor">BackColor: R<input type="text" class="colorTextBox"> G<input type="text"
+                                                                                                            class="colorTextBox">
+        B<input type="text" class="colorTextBox"> A<input type="text" class="colorTextBox" value="1"></label>
+    <label class="labelDefault">Font Size: <input type="text" class="colorTextBox" id="fontSize"></label>
 </div>
-<div class="contentCreationField" id="confirmArea">
+<label class="fieldHeader">Scenario Creation</label>
+
+<div class="contentCreationField" id="sceneCreator">
+    <label class="labelDefault">Scenario name:<input type="text" class="colorTextBox textInput" id="scenarioName"></label>
+</div>
+<label class="fieldHeader">Creator</label>
+<div class="contentCreationField confirmArea">
     <button class="button" id="createConfigButton">Create Configuration</button>
     <button class="button" id="addParButton">Add Paragraph</button>
+    <button class="button" id="createScenario">Create Scenario</button>
+</div>
+<div class="contentCreationField confirmArea">
+    <button class="button" id="saveScenarios">Save Scenarios</button>
+    <button class="button" id="saveSpeakers">Save Speakers</button>
 </div>
 
 </body>

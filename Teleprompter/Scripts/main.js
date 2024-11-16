@@ -1,12 +1,32 @@
 import {createTextObject, TextHandler} from "./textHandler.js"
 import {Color} from "./utils.js"
+import {Speakers} from "./dataParser.js";
 
 let canvas = null;
 let textHandler = null;
+let speakers = null;
 
-
-function initialize()
+function changeDisplayedText()
 {
+    if(speakers === null || textHandler === null)
+        return;
+
+    const scenario = speakers.getSelectedScenario();
+    if(scenario == null)
+        return;
+
+    let pars = []
+    for(const par of scenario.paragraphs)
+    {
+        const paragraphStyle = speakers.getSpeakerStyle(par.speakerName);
+        console.log(par.speakerName)
+        console.log(paragraphStyle);
+        pars.push(createTextObject(par.paragraphContent, paragraphStyle.foreColor, paragraphStyle.backColor, paragraphStyle.fontSize));
+    }
+    textHandler.initText(pars);
+}
+
+async function initialize() {
     // assign events
 
     // setup environment
@@ -14,45 +34,19 @@ function initialize()
     //canvas.width = window.innerWidth;
     //canvas.height = window.innerHeight;
 
+    document.getElementById("scenarioSelector").addEventListener("click", async () => {changeDisplayedText()})
+
     // do drawing
     textHandler = new TextHandler();
+    speakers = new Speakers()
+    await speakers.loadSpeakers("./Scripts/SaveData/speakers.json");
+    await speakers.loadScenarios("./Scripts/SaveData/scenarios.json");
+    for (const speaker of speakers.textData) {
+        speakers.addScenarioItem(speaker, "scenarioSelector")
+    }
+
     //textHandler.initBox(10,10, 50,50)
-    textHandler.initText([createTextObject(
-        "R: *inaudible whisper* ... There was a fish in the percolator.\n",
-        new Color(255, 255, 255),
-        new Color(255, 10, 10, 0),
-        3
-        ), createTextObject(
-            "A: *nudge*",
-        new Color(100,255,255),
-        new Color(10,100,10, 1),
-        3
-    ),
-        createTextObject(
-            "R: Backed by the European Union, NASA has unveiled their magnum opus now dubbed Project Europa. If successful, this one-time, irreversible space operation will completely isolate the problem by relocating the continent to Jupiter. So for everybody watching at home, rest assured, this global threat will soon cease to exist.\n",
-            new Color(50, 170, 200),
-            new Color(150, 170, 10, 0),
-            1
-        ),
-        createTextObject(
-            "R: Backed by the European Union, NASA has unveiled their magnum opus now dubbed Project Europa. If successful, this one-time, irreversible space operation will completely isolate the problem by relocating the continent to Jupiter. So for everybody watching at home, rest assured, this global threat will soon cease to exist.\n",
-            new Color(50, 170, 200),
-            new Color(150, 170, 10, 0),
-            1
-        ),
-        createTextObject(
-            "R: Backed by the European Union, NASA has unveiled their magnum opus now dubbed Project Europa. If successful, this one-time, irreversible space operation will completely isolate the problem by relocating the continent to Jupiter. So for everybody watching at home, rest assured, this global threat will soon cease to exist.\n",
-            new Color(50, 170, 200),
-            new Color(150, 170, 10, 0),
-            1
-        ),
-        createTextObject(
-            "R: Backed by the European Union, NASA has unveiled their magnum opus now dubbed Project Europa. If successful, this one-time, irreversible space operation will completely isolate the problem by relocating the continent to Jupiter. So for everybody watching at home, rest assured, this global threat will soon cease to exist.\n",
-            new Color(50, 170, 200),
-            new Color(150, 170, 10, 0),
-            4
-        )
-    ]);
+
 }
 
 

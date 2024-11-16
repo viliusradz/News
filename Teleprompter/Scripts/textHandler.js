@@ -8,8 +8,8 @@ export function createTextObject(text, foreColor, backColor, fontSize)
 {
     return {
         text: text,
-        foreColor: foreColor,
-        backColor: backColor,
+        foreColor: new Color(parseFloat(foreColor.r), parseFloat(foreColor.g), parseFloat(foreColor.b), parseFloat(foreColor.a)),
+        backColor: new Color(parseFloat(backColor.r), parseFloat(backColor.g), parseFloat(backColor.b), parseFloat(backColor.a)),
         fontSize: fontSize
     }
 }
@@ -48,10 +48,17 @@ export class TextHandler {
 
         this.textObjects = textObjects;
        // this.inputUpdateMethods.push(() => this.drawText());
+        this.clearText()
         this.drawText();
         //this.onResizeUpdateMethods.push(() => this.drawText());
         window.requestAnimationFrame(()=> this.scroll());
 
+    }
+
+    clearText()
+    {
+        const baseCont = document.getElementById("textBounds")
+        baseCont.textContent = '';
     }
 
     drawText() {

@@ -1,2 +1,2 @@
 
-export let fontSize = 2;
+export let fontSize = 3;
