@@ -27,5 +27,26 @@
                 "paragraphContent": "Fortune cookie AD campaign? Europe getting into SPACE exploration? Stay WITH us as we report on ALL that has happened in the past week.\n"
             }
         ]
+    },
+    {
+        "name": "Europa",
+        "paragraphs": [
+            {
+                "speakerName": "Aidas",
+                "paragraphContent": "On more pressing news, as the popularity of avocados grows, carbon emissions in Europe have reached dangerous levels. With rising tensions, The National Aeronautic and Space Administration has finally published a foolproof solution they have been working on in anticipation of this trend.\n"
+            },
+            {
+                "speakerName": "Redas",
+                "paragraphContent": "Backed by the European Union, NASA has unveiled their magnum opus now dubbed Project Europa. If successful, this one-time, irreversible space operation will completely isolate the problem by relocating the continent to Jupiter. So for everybody watching at home, rest assured, this global threat will soon cease to exist."
+            },
+            {
+                "speakerName": "Aidas",
+                "paragraphContent": "Moreover, according to recent announcements, all European citizens will be assigned new housing specifically catered to the much harsher environment. (Under your breath) Heh, maybe finally I’ll get a normal view outside my bedroom window."
+            },
+            {
+                "speakerName": "Redas",
+                "paragraphContent": "More on that from our resident expert on the field. I pass it on to you Robert."
+            }
+        ]
     }
 ]
