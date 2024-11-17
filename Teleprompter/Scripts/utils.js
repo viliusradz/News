@@ -1,3 +1,7 @@
+import speakerData from "./SaveData/speakers.json" with {type:"json"}
+import scenarioData from "./SaveData/scenarios.json" with {type:"json"}
+
+
 export class Color {
     constructor(r, g, b, a = 1) {
 
@@ -6,7 +10,7 @@ export class Color {
         this.b = b;
         this.a = a;
     }
-    getHexString(backgroundColor)
+    getHexString()
     {
         return 'rgba('+this.r+', '+this.g+', '+this.b+','+this.a+')';
     }
@@ -35,6 +39,9 @@ export function download(fileName, content)
 }
 
 export async function loadFile(filePath) {
-    const response = await fetch(filePath);
-    return await response.json();
+    console.log(speakerData)
+    if(filePath.includes("speakers.json"))
+        return speakerData;
+    else
+        return scenarioData;
 }

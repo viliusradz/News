@@ -1,8 +1,6 @@
 import {createTextObject, TextHandler} from "./textHandler.js"
-import {Color} from "./utils.js"
 import {Speakers} from "./dataParser.js";
 
-let canvas = null;
 let textHandler = null;
 let speakers = null;
 
