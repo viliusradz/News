@@ -138,5 +138,51 @@
                 "paragraphContent": "That is great to hear, thank you very much Dr. Weed for your insightful commentary. (pan to camera Vilius out of shot) With no recent developments, you can expect that everything is running smoothly. Back to you, Chris.\n"
             }
         ]
+    },
+    {
+        "name": "ICar",
+        "paragraphs": [
+            {
+                "speakerName": "Aidas",
+                "paragraphContent": " Now onto the technological side of things - (no pause) After half a decade and countless iterations, Apple’s newest iCar might finally see the light of day. But let’s not get our hopes up, as these test vehicles must first gain the approval from car specialists before they can hit the market."
+            },
+            {
+                "speakerName": "Redas",
+                "paragraphContent": "That’s right, and luckily, today we have one such test vehicle on hand thanks to the renowned car guru and internet personality Bacon P. Chris who has teamed up with our resident specialist Dr. Daniel Reed to answer the burning question: Is this a product worth your money or yet another Apple cash grab? \n\n"
+            }
+        ]
+    },
+    {
+        "name": "Fortune Cookie AD Campaign",
+        "paragraphs": [
+            {
+                "speakerName": "Aidas",
+                "paragraphContent": "The mathematics community is regaling, the dawn of a winter morning is accompanied by the discovery of a new prime number. Listen—\n(Redas interrupts)\n"
+            },
+            {
+                "speakerName": "Redas",
+                "paragraphContent": " Breaking news, breaking news! Sorry to interrupt the live broadcast, but it has just been reported that the police have captured the criminal mastermind behind the Fortune Drug Ring. \n"
+            },
+            {
+                "speakerName": "Aidas",
+                "paragraphContent": "John Jonah Jameson Jr. (spiderman guy photo in the edited) also known as Daddy “Big Suck”. Has been the center of attention for the last decade after taking over the family business as the new leader of the Mafia Fortuna. Only one question remains: what WAS the straw that broke the camel's back?\n"
+            },
+            {
+                "speakerName": "Redas",
+                "paragraphContent": "The Mafia Fortuna has been an underground group since the very beginning, influencing the political scene from the shadows. Unfortunately for them, their latest scheme crossed the line and has finally brought their antics into the limelight. Their big plan - drugs, cookies and dubious fortunes - is a force to be reckoned with.\n"
+            },
+            {
+                "speakerName": "Aidas",
+                "paragraphContent": "Reportedly, fortune cookies around the world have tested positive for powerful hallucinogenic narcotics accompanied by a daunting message - “Daddy “Big Suck” for president of Jupiter”. Testimonials state that after submitting their votes a mysterious package was delivered to them before dusk. However, not everybody was willing to stay quiet, some immediately submitting their concerns to the police. \n"
+            },
+            {
+                "speakerName": "Redas",
+                "paragraphContent": "The FBI raided the cookie bakery, the criminal gang, including John Jonah Jameson Jr. have at last been apprehended.\n"
+            },
+            {
+                "speakerName": "Aidas",
+                "paragraphContent": "Since no more information has been released, we’ll keep you updated at a later date.\n"
+            }
+        ]
     }
 ]
